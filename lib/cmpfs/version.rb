@@ -50,7 +50,7 @@
 module CmpFS
 
 	# Current version of the cmpfs.Ruby library
-	VERSION				=	'0.0.0'
+	VERSION				=	'0.0.1'
 
 	private
 	VERSION_PARTS_		=	VERSION.split(/[.]/).collect { |n| n.to_i } # :nodoc:
@@ -61,6 +61,8 @@ module CmpFS
 	VERSION_MINOR		=	VERSION_PARTS_[1] # :nodoc:
 	# Revision version of the cmpfs.Ruby library
 	VERSION_PATCH		=	VERSION_PARTS_[2] # :nodoc:
+
+	VERSION_REVISION	=	VERSION_PATCH # :nodoc:
 
 end # module CmpFS
 
