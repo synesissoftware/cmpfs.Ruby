@@ -1,2 +1,4 @@
 # cmpfs.Ruby
-Compare File-System entities, for Ruby
+**Com**pare **F**ile-**S**ystem entities, for **Ruby**
+
+
