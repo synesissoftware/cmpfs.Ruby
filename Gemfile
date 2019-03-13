@@ -2,5 +2,11 @@
 
 source "https://rubygems.org"
 
-gem "xqsr3"
+if RUBY_VERSION >= '2'
+
+	gem "xqsr3", '~> 0.31'
+else
+
+	gem 'xqsr3', '~> 0.21.3'
+end
 

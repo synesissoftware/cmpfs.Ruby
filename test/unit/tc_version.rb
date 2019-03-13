@@ -4,6 +4,7 @@ $:.unshift File.join(File.dirname(__FILE__), '../../lib')
 
 require 'cmpfs/version'
 
+require 'xqsr3/extensions/test/unit'
 require 'test/unit'
 
 class Test_version < Test::Unit::TestCase
