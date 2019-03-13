@@ -56,6 +56,21 @@ end
 =end
 
 module CmpFS
+
+# The comparison module, which may be used directly, and which may be
+# extended or included
+#
+# Important functions:
+#
+# - +CmpFS::Compare.compare_binary_files()+
+# - +CmpFS::Compare.compare_binary_streams()+
+# - +CmpFS::Compare.compare_binary()+
+#
+# - +CmpFS::Compare.compare_text_files()+
+# - +CmpFS::Compare.compare_text_streams()+
+# - +CmpFS::Compare.compare_text()+
+#
+#
 module Compare
 
 	def self.extended receiver

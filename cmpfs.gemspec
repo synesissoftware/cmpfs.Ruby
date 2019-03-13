@@ -34,10 +34,10 @@ END_DESC
 
 	if RUBY_VERSION >= '2'
 
-		spec.require_ruby_version = '~> 2.0'
+		spec.required_ruby_version = '~> 2.0'
 	else
 
-		spec.required_ruby_version = '~> 1.9'
+		spec.required_ruby_version = '~> 1.9', '>= 1.9.3'
 	end
 
 	spec.add_development_dependency 'xqsr3', [ '~> 0.31' ]
