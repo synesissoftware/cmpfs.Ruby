@@ -43,5 +43,5 @@ T.B.C.
 
 ### License
 
-**cmpfs.Gp** is released under the 3-clause BSD license. See [LICENSE](./LICENSE) for details.
+**cmpfs.Ruby** is released under the 3-clause BSD license. See [LICENSE](./LICENSE) for details.
 
