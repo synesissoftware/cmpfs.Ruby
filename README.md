@@ -39,8 +39,9 @@ Defect reports, feature requests, and pull requests are welcome on https://githu
 
 ### Related projects
 
-* [**cmpfs.Ruby**](https://github.com/synesissoftware/cmpfs.Ruby/)
+T.B.C.
 
 ### License
 
 **cmpfs.Gp** is released under the 3-clause BSD license. See [LICENSE](./LICENSE) for details.
+
