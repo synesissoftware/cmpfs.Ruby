@@ -11,6 +11,7 @@
 #
 # Author:       Matthew Wilson
 #
+# Copyright (c) 2019-2024, Matthew Wilson and Synesis Information Systems
 # Copyright (c) 2019, Matthew Wilson and Synesis Software
 # All rights reserved.
 #
@@ -53,25 +54,28 @@ require 'cmpfs/version'
 ## Root module for *cmpfs*
 module CmpFS
 
-	def self.extended receiver
+  def self.extended receiver
 
-		receiver.class_eval do
+    receiver.class_eval do
 
-			extend CmpFS::Compare
-		end
+      extend CmpFS::Compare
+    end
 
-		$stderr.puts "#{receiver} extended by #{CmpFS}" if $DEBUG
-	end
+    $stderr.puts "#{receiver} extended by #{CmpFS}" if $DEBUG
+  end
 
-	def self.included receiver
+  def self.included receiver
 
-		receiver.class_eval do
+    receiver.class_eval do
 
-			include CmpFS::Compare
-		end
+      include CmpFS::Compare
+    end
 
-		$stderr.puts "#{receiver} included #{CmpFS}" if $DEBUG
-	end
+    $stderr.puts "#{receiver} included #{CmpFS}" if $DEBUG
+  end
 
 end # module CmpFS
+
+
+# ############################## end of file ############################# #
 

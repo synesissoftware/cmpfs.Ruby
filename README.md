@@ -1,17 +1,25 @@
-# cmpfs.Ruby
+# cmpfs.Ruby <!-- omit in toc -->
+
 **Com**pare **F**ile-**S**ystem entities, for **Ruby**
+
+[![Gem Version](https://badge.fury.io/rb/cmpfs-ruby.svg)](https://badge.fury.io/rb/cmpfs-ruby)
 
 ## Introduction
 
-T.B.C.
+Provides platform-independent facilities for comparing file contents, for both binary and text files
 
-## Table of Contents
+## Table of Contents <!-- omit in toc -->
 
-1. [Introduction](#introduction)
-2. [Installation](#installation)
-3. [Components](#components)
-4. [Examples](#examples)
-5. [Project Information](#project-information)
+- [Introduction](#introduction)
+- [Installation](#installation)
+- [Components](#components)
+- [Examples](#examples)
+- [Project Information](#project-information)
+  - [Where to get help](#where-to-get-help)
+  - [Contribution guidelines](#contribution-guidelines)
+  - [Dependencies](#dependencies)
+  - [Related projects](#related-projects)
+  - [License](#license)
 
 ## Installation
 
@@ -44,4 +52,7 @@ T.B.C.
 ### License
 
 **cmpfs.Ruby** is released under the 3-clause BSD license. See [LICENSE](./LICENSE) for details.
+
+
+<!-- ########################### end of file ########################### -->
 

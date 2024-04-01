@@ -1,4 +1,4 @@
-#! /usr/bin/env ruby
+#!  /usr/bin/env ruby
 
 $:.unshift File.join(File.dirname(__FILE__), '../../lib')
 
@@ -9,29 +9,32 @@ require 'test/unit'
 
 class Test_version < Test::Unit::TestCase
 
-	def test_has_VERSION
+  def test__VERSION
 
-		assert defined? CmpFS::VERSION
-	end
+    assert defined? CmpFS::VERSION
+  end
 
-	def test_has_VERSION_MAJOR
+  def test__VERSION_MAJOR
 
-		assert defined? CmpFS::VERSION_MAJOR
-	end
+    assert defined? CmpFS::VERSION_MAJOR
+  end
 
-	def test_has_VERSION_MINOR
+  def test__VERSION_MINOR
 
-		assert defined? CmpFS::VERSION_MINOR
-	end
+    assert defined? CmpFS::VERSION_MINOR
+  end
 
-	def test_has_VERSION_REVISION
+  def test__VERSION_REVISION
 
-		assert defined? CmpFS::VERSION_REVISION
-	end
+    assert defined? CmpFS::VERSION_REVISION
+  end
 
-	def test_VERSION_has_consistent_format
+  def test__VERSION_has_consistent_format
 
-		assert_equal CmpFS::VERSION, "#{CmpFS::VERSION_MAJOR}.#{CmpFS::VERSION_MINOR}.#{CmpFS::VERSION_PATCH}"
-	end
+    version = CmpFS::VERSION
+    j_n_p   = "#{CmpFS::VERSION_MAJOR}.#{CmpFS::VERSION_MINOR}.#{CmpFS::VERSION_PATCH}"
+
+    assert_match /^#{j_n_p}(|\..+)$/, version
+  end
 end
 

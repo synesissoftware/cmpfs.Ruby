@@ -1,16 +1,17 @@
 
 # ######################################################################## #
-# File:         cmpfs/version.rb
+# File:     cmpfs/version.rb
 #
-# Purpose:      Version for cmpfs.Ruby library
+# Purpose:  Version for cmpfs.Ruby library
 #
-# Created:      1st March 2019
-# Updated:      11th April 2019
+# Created:  1st March 2019
+# Updated:  1st April 2024
 #
-# Home:         http://github.com/synesissoftware/cmpfs.Ruby
+# Home:     http://github.com/synesissoftware/cmpfs.Ruby
 #
-# Author:       Matthew Wilson
+# Author:   Matthew Wilson
 #
+# Copyright (c) 2019-2024, Matthew Wilson and Synesis Information Systems
 # Copyright (c) 2019, Matthew Wilson and Synesis Software
 # All rights reserved.
 #
@@ -49,23 +50,23 @@
 
 module CmpFS
 
-	# Current version of the cmpfs.Ruby library
-	VERSION				=	'0.2.1'
+  # Current version of the cmpfs.Ruby library
+  VERSION           = '0.2.1.1'
 
-	private
-	VERSION_PARTS_		=	VERSION.split(/[.]/).collect { |n| n.to_i } # :nodoc:
-	public
-	# Major version of the cmpfs.Ruby library
-	VERSION_MAJOR		=	VERSION_PARTS_[0] # :nodoc:
-	# Minor version of the cmpfs.Ruby library
-	VERSION_MINOR		=	VERSION_PARTS_[1] # :nodoc:
-	# Revision version of the cmpfs.Ruby library
-	VERSION_PATCH		=	VERSION_PARTS_[2] # :nodoc:
+  private
+  VERSION_PARTS_    = VERSION.split(/[.]/).collect { |n| n.to_i } # :nodoc:
+  public
+  # Major version of the cmpfs.Ruby library
+  VERSION_MAJOR     = VERSION_PARTS_[0] # :nodoc:
+  # Minor version of the cmpfs.Ruby library
+  VERSION_MINOR     = VERSION_PARTS_[1] # :nodoc:
+  # Revision version of the cmpfs.Ruby library
+  VERSION_PATCH     = VERSION_PARTS_[2] # :nodoc:
 
-	VERSION_REVISION	=	VERSION_PATCH # :nodoc:
+  VERSION_REVISION  = VERSION_PATCH # :nodoc:
 
 end # module CmpFS
 
-# ############################## end of file ############################# #
 
+# ############################## end of file ############################# #
 

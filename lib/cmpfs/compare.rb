@@ -1,16 +1,17 @@
 
 # ######################################################################## #
-# File:         cmpfs/version.rb
+# File:     cmpfs/version.rb
 #
-# Purpose:      Version for cmpfs.Ruby library
+# Purpose:  Version for cmpfs.Ruby library
 #
-# Created:      1st March 2019
-# Updated:      13th March 2019
+# Created:  1st March 2019
+# Updated:  1st April 2024
 #
-# Home:         http://github.com/synesissoftware/cmpfs.Ruby
+# Home:     http://github.com/synesissoftware/cmpfs.Ruby
 #
-# Author:       Matthew Wilson
+# Author:   Matthew Wilson
 #
+# Copyright (c) 2019-2024, Matthew Wilson and Synesis Information Systems
 # Copyright (c) 2019, Matthew Wilson and Synesis Software
 # All rights reserved.
 #
@@ -46,11 +47,12 @@
 
 if RUBY_VERSION >= '2'
 
-	require 'cmpfs/compare/api_2'
+  require 'cmpfs/compare/api_2'
 else
 
-	require 'cmpfs/compare/api_1_9'
+  require 'cmpfs/compare/api_1_9'
 end
+
 
 =begin
 =end
@@ -73,32 +75,32 @@ module CmpFS
 #
 module Compare
 
-	def self.extended receiver
+  def self.extended receiver
 
-		receiver.class_eval do
+    receiver.class_eval do
 
-			extend CmpFS_Compare_Methods
-		end
+      extend CmpFS_Compare_Methods
+    end
 
-		$stderr.puts "#{receiver} extended by #{CmpFS_Compare_Methods}" if $DEBUG
-	end
+    $stderr.puts "#{receiver} extended by #{CmpFS_Compare_Methods}" if $DEBUG
+  end
 
-	def self.included receiver
+  def self.included receiver
 
-		receiver.class_eval do
+    receiver.class_eval do
 
-			include CmpFS_Compare_Methods
-		end
+      include CmpFS_Compare_Methods
+    end
 
-		$stderr.puts "#{receiver} included #{CmpFS_Compare_Methods}" if $DEBUG
-	end
+    $stderr.puts "#{receiver} included #{CmpFS_Compare_Methods}" if $DEBUG
+  end
 
-	extend CmpFS_Compare_Methods
-	include CmpFS_Compare_Methods
+  extend CmpFS_Compare_Methods
+  include CmpFS_Compare_Methods
 
 end # module Compare
 end # module CmpFS
 
-# ############################## end of file ############################# #
 
+# ############################## end of file ############################# #
 

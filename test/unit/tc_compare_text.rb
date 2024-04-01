@@ -1,4 +1,4 @@
-#!/usr/bin/env ruby
+#! /usr/bin/env ruby
 
 $:.unshift File.join(File.dirname(__FILE__), '../../lib')
 
@@ -10,56 +10,110 @@ require 'test/unit'
 require 'stringio'
 require 'tempfile'
 
+
 class Test_CmpFS_compare_text < Test::Unit::TestCase
 
-	include ::CmpFS
+  include ::CmpFS
 
-	def test_compare_text_identical_1
+  def test__compare_text__empty
 
-		lhs		=	StringIO.new
-		rhs_eq	=	StringIO.new
+    lhs		=	StringIO.new
+    rhs_eq	=	StringIO.new
 
-		lhs << "line-1\n"
-		rhs_eq << "line-1\n"
+    assert compare_text(lhs, rhs_eq), 'streams should be the same'
+  end
 
-		lhs << "line-2\n"
-		rhs_eq << "line-2\n"
+  def test__compare_text__blank_lines
 
-		assert compare_text(lhs, rhs_eq), 'streams should be the same'
+    lhs		=	StringIO.new <<END_OF_INPUT
 
-		rhs_ne	=	StringIO.new
 
-		rhs_ne << "line-1\n"
-		rhs_ne << "line2\n"
+END_OF_INPUT
+    rhs_eq	=	StringIO.new <<END_OF_INPUT
 
-		assert_false compare_text(lhs, rhs_ne), 'streams should not be the same'
-	end
 
-	def test_compare_text_same_with_blank_lines_1
+END_OF_INPUT
 
-		lhs		=	StringIO.new
-		rhs_eq	=	StringIO.new
+    assert compare_text(lhs, rhs_eq), 'streams should be the same'
+  end
 
-		lhs << "line-1\n"
-		lhs << "\n"
-		rhs_eq << "line-1\n"
+  def test__compare_text__identical_lines_1
 
-		lhs << " line-2\n"
-		rhs_eq << "line-2\n"
+    lhs		=	StringIO.new <<END_OF_INPUT
+line-1
+line-2
 
-		assert_false compare_text(lhs, rhs_eq), 'streams should not be the same'
-		assert compare_text(lhs, rhs_eq, trim_lines: true, skip_blank_lines: true), 'streams should be the same'
+END_OF_INPUT
+    rhs_eq	=	StringIO.new <<END_OF_INPUT
+line-1
+line-2
 
-		rhs_ne	=	StringIO.new
+END_OF_INPUT
 
-		rhs_ne << "line-1\n"
-		rhs_ne << "line2\n"
+    assert compare_text(lhs, rhs_eq), 'streams should be the same'
+  end
 
-		assert_false compare_text(lhs, rhs_ne), 'streams should not be the same'
-	end
+  def test__compare_text__different_lines_1
 
+    lhs		=	StringIO.new <<END_OF_INPUT
+line-1
+line-2
+
+END_OF_INPUT
+    rhs_ne	=	StringIO.new <<END_OF_INPUT
+line-1
+line2
+
+END_OF_INPUT
+
+    assert_false compare_text(lhs, rhs_ne), 'streams should not be the same'
+  end
+
+  def test__compare_text__different_lines_2
+
+    lhs		=	StringIO.new <<END_OF_INPUT
+line-1
+
+line-2
+END_OF_INPUT
+    rhs_ne	=	StringIO.new <<END_OF_INPUT
+line-1
+line-2
+
+END_OF_INPUT
+
+    assert_false compare_text(lhs, rhs_ne), 'streams should not be the same'
+  end
+
+  def test__compare_text__different_streams_with_permutations_of_trim_and_skip_1
+
+    lhs		=	StringIO.new <<END_OF_INPUT
+line-1
+
+  line-2
+END_OF_INPUT
+    rhs_eq	=	StringIO.new <<END_OF_INPUT
+line-1
+line-2
+END_OF_INPUT
+
+    assert_false compare_text(lhs, rhs_eq), 'streams should not be the same'
+    assert_false compare_text(lhs, rhs_eq, trim_lines: false, skip_blank_lines: true), 'streams should not be the same'
+    assert_false compare_text(lhs, rhs_eq, trim_lines: true, skip_blank_lines: false), 'streams should not be the same'
+    assert compare_text(lhs, rhs_eq, trim_lines: true, skip_blank_lines: true), 'streams should be the same'
+
+    rhs_ne	=	StringIO.new <<END_OF_INPUT
+line-1
+line2
+END_OF_INPUT
+
+    assert_false compare_text(lhs, rhs_ne), 'streams should not be the same'
+    assert_false compare_text(lhs, rhs_ne, trim_lines: false, skip_blank_lines: true), 'streams should not be the same'
+    assert_false compare_text(lhs, rhs_ne, trim_lines: true, skip_blank_lines: false), 'streams should not be the same'
+    assert_false compare_text(lhs, rhs_ne, trim_lines: true, skip_blank_lines: true), 'streams should not be the same'
+  end
 end
 
-# ############################## end of file ############################# #
 
+# ############################## end of file ############################# #
 
