@@ -15,12 +15,12 @@ class Test_CmpFS_Compare_compare_binary < Test::Unit::TestCase
 
   def test__compare_binary__identical_1
 
-    lhs		=	StringIO.new 'abcdefghijiklmno'
-    rhs_eq	=	StringIO.new 'abcdefghijiklmno'
+    lhs     = StringIO.new 'abcdefghijiklmno'
+    rhs_eq  = StringIO.new 'abcdefghijiklmno'
 
     assert CmpFS::Compare.compare_binary(lhs, rhs_eq), 'streams should be the same'
 
-    rhs_ne	=	StringIO.new 'abcdefghijiklmn'
+    rhs_ne  = StringIO.new 'abcdefghijiklmn'
 
     assert_false CmpFS::Compare.compare_binary(lhs, rhs_ne), 'streams should not be the same'
   end
@@ -36,11 +36,11 @@ class Test_CmpFS_Compare_compare_binary < Test::Unit::TestCase
       lhs_f.rewind
       lhs_f.close
 
-      rhs_eq	=	StringIO.new 'abcdefghijiklmno'
+      rhs_eq  = StringIO.new 'abcdefghijiklmno'
 
       assert CmpFS::Compare.compare_binary(lhs_f.path, rhs_eq), 'streams should be the same'
 
-      rhs_ne	=	StringIO.new 'abcdefghijiklmnop'
+      rhs_ne  = StringIO.new 'abcdefghijiklmnop'
 
       assert_false CmpFS::Compare.compare_binary(lhs_f.path, rhs_ne), 'streams should not be the same'
     ensure

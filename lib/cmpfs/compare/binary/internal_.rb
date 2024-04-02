@@ -38,8 +38,8 @@ module Internal_
 
     def self.compare_binary_ lhs, rhs, options
 
-      lhs_type	=	self.determine_param_type_ lhs
-      rhs_type	=	self.determine_param_type_ rhs
+      lhs_type  = self.determine_param_type_ lhs
+      rhs_type  = self.determine_param_type_ rhs
 
       raise ArgumentError, "lhs is of unsupported type '#{lhs.class}'" unless lhs_type
       raise ArgumentError, "rhs is of unsupported type '#{rhs.class}'" unless rhs_type
@@ -61,19 +61,19 @@ module Internal_
 
           if :path == rhs_type
 
-          	File.open(rhs, 'rb') do |rhs_f|
+            File.open(rhs, 'rb') do |rhs_f|
 
-          		return self.compare_binary_streams_ lhs, rhs_f, options
-          	end
+              return self.compare_binary_streams_ lhs, rhs_f, options
+            end
           end
         when :path
 
           if :path == lhs_type
 
-          	File.open(lhs, 'rb') do |lhs_f|
+            File.open(lhs, 'rb') do |lhs_f|
 
-          		return self.compare_binary_streams_ lhs_f, rhs, options
-          	end
+              return self.compare_binary_streams_ lhs_f, rhs, options
+            end
           end
         end
       end
