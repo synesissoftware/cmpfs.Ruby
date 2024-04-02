@@ -15,6 +15,18 @@ module CmpFS_Compare_Methods
 
   # Compares two files, named by +lhs_path+ and +rhs_path+, in a binary
   # (exact) manner
+  #
+  # === Signature
+  #
+  # * *Parameters:*
+  #   - +lhs_path+:: (+String+) The name of a file
+  #   - +rhs_path+:: (+String+) The name of a file
+  #   - +options+:: (+Hash+) Options that control the behaviour of the method
+  #
+  # * *Options:*
+  #
+  # === Return
+  # +true+ if the files have exactly the same content; +false+ otherwise.
   def compare_binary_files lhs_path, rhs_path, options = {}
 
     options ||= {}
@@ -24,6 +36,19 @@ module CmpFS_Compare_Methods
 
   # Compares two streams, +lhs_stm+ and +rhs_stm+, in a binary
   # (exact) manner
+  #
+  # === Signature
+  #
+  # * *Parameters:*
+  #   - +lhs_stm+:: (stream) A stream object
+  #   - +rhs_stm+:: (stream) A stream object
+  #   - +options+:: (+Hash+) Options that control the behaviour of the method
+  #
+  # * *Options:*
+  #   - +:no_rewind+:: (boolean) Prevents the default behaviour of rewinding each stream before processing
+  #
+  # === Return
+  # +true+ if the streams have exactly the same content; +false+ otherwise.
   def compare_binary_streams lhs_stm, rhs_stm, options = {}
 
     options ||= {}
@@ -33,10 +58,17 @@ module CmpFS_Compare_Methods
 
   # Compares two files/streams in a binary (exact) manner
   #
-  # == Signature
+  # === Signature
   #
-  # == Return
+  # * *Parameters:*
+  #   - +lhs+:: (+String+, stream) The name of a file, or a stream object
+  #   - +rhs+:: (+String+, stream) The name of a file, or a stream object
+  #   - +options+:: (+Hash+) Options that control the behaviour of the method
   #
+  # * *Options:*
+  #   - +:no_rewind+:: (boolean) Prevents the default behaviour of rewinding each stream before processing
+  #
+  # === Return
   # +true+ if the files/streams have exactly the same content; +false+
   # otherwise.
   def compare_binary lhs, rhs, options = {}
@@ -53,18 +85,15 @@ module CmpFS_Compare_Methods
   # === Signature
   #
   # * *Parameters:*
-  #   - +lhs_path+:: (String) The name of a file
-  #   - +rhs_path+:: (String) The name of a file
-  #   - +options+:: (Hash) Options
+  #   - +lhs_path+:: (+String+) The name of a file
+  #   - +rhs_path+:: (+String+) The name of a file
+  #   - +options+:: (+Hash+) Options that control the behaviour of the method
   #
   # * *Options:*
-  #   - +:skip_blank_lines+:: (boolean) Determines whether blank lines
-  #      should be skipped from the comparison
-  #   - +:trim_lines+:: (boolean) Determines whether lines should be
-  #      trimmed of leading and trailing space (including EOL sequence)
+  #   - +:skip_blank_lines+:: (boolean) Determines whether blank lines should be skipped from the comparison
+  #   - +:trim_lines+:: (boolean) Determines whether lines should be trimmed of leading and trailing space (including EOL sequence)
   #
   # === Return
-  #
   # +true+ if the files/streams have exactly the same content; +false+
   # otherwise.
   def compare_text_files lhs_path, rhs_path, options = {}
@@ -82,18 +111,14 @@ module CmpFS_Compare_Methods
   # * *Parameters:*
   #   - +lhs_stm+:: (stream) A stream object
   #   - +rhs_stm+:: (stream) A stream object
-  #   - +options+:: (Hash) Options
+  #   - +options+:: (+Hash+) Options that control the behaviour of the method
   #
   # * *Options:*
-  #   - +:no_rewind+:: (boolean) Prevents the default behaviour of
-  #      rewinding the stream before processing
-  #   - +:skip_blank_lines+:: (boolean) Determines whether blank lines
-  #      should be skipped from the comparison
-  #   - +:trim_lines+:: (boolean) Determines whether lines should be
-  #      trimmed of leading and trailing space (including EOL sequence)
+  #   - +:no_rewind+:: (boolean) Prevents the default behaviour of rewinding each stream before processing
+  #   - +:skip_blank_lines+:: (boolean) Determines whether blank lines should be skipped from the comparison
+  #   - +:trim_lines+:: (boolean) Determines whether lines should be trimmed of leading and trailing space (including EOL sequence)
   #
   # === Return
-  #
   # +true+ if the files/streams have exactly the same content; +false+
   # otherwise.
   def compare_text_streams lhs_stm, rhs_stm, options = {}
@@ -109,20 +134,16 @@ module CmpFS_Compare_Methods
   # === Signature
   #
   # * *Parameters:*
-  #   - +lhs+:: (String, stream) The name of a file, or a stream object
-  #   - +rhs+:: (String, stream) The name of a file, or a stream object
-  #   - +options+:: (Hash) Options
+  #   - +lhs+:: (+String+, stream) The name of a file, or a stream object
+  #   - +rhs+:: (+String+, stream) The name of a file, or a stream object
+  #   - +options+:: (+Hash+) Options that control the behaviour of the method
   #
   # * *Options:*
-  #   - +:no_rewind+:: (boolean) Prevents the default behaviour of
-  #      rewinding the stream before processing
-  #   - +:skip_blank_lines+:: (boolean) Determines whether blank lines
-  #      should be skipped from the comparison
-  #   - +:trim_lines+:: (boolean) Determines whether lines should be
-  #      trimmed of leading and trailing space (including EOL sequence)
+  #   - +:no_rewind+:: (boolean) Prevents the default behaviour of rewinding each stream before processing
+  #   - +:skip_blank_lines+:: (boolean) Determines whether blank lines should be skipped from the comparison
+  #   - +:trim_lines+:: (boolean) Determines whether lines should be trimmed of leading and trailing space (including EOL sequence)
   #
   # === Return
-  #
   # +true+ if the files/streams have exactly the same content; +false+
   # otherwise.
   def compare_text lhs, rhs, options = {}

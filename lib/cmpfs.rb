@@ -1,15 +1,15 @@
 
 # ######################################################################## #
-# File:         cmpfs.rb
+# File:     cmpfs.rb
 #
-# Purpose:      Primary require for cmpfs.Ruby library
+# Purpose:  Primary require for cmpfs.Ruby library
 #
-# Created:      1st March 2019
-# Updated:      13th March 2019
+# Created:  1st March 2019
+# Updated:  2nd April 2024
 #
-# Home:         http://github.com/synesissoftware/cmpfs.Ruby
+# Home:     http://github.com/synesissoftware/cmpfs.Ruby
 #
-# Author:       Matthew Wilson
+# Author:   Matthew Wilson
 #
 # Copyright (c) 2019-2024, Matthew Wilson and Synesis Information Systems
 # Copyright (c) 2019, Matthew Wilson and Synesis Software
