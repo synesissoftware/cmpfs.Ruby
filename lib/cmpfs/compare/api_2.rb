@@ -74,7 +74,7 @@ module CmpFS_Compare_Methods
 
 
   # Compares two files, named by +lhs_path+ and +rhs_path+, in a textual
-  # manner according to the given +options+
+  # manner according to the given +options+.
   #
   # === Signature
   #
@@ -88,15 +88,14 @@ module CmpFS_Compare_Methods
   #   - +:trim_lines+:: (boolean) Determines whether lines should be trimmed of leading and trailing space (including EOL sequence)
   #
   # === Return
-  # +true+ if the files/streams have exactly the same content; +false+
-  # otherwise.
+  # +true+ if the files/streams have the same content; +false+ otherwise.
   def compare_text_files lhs_path, rhs_path, **options
 
     ::CmpFS::Compare::Text::Internal_.compare_text_files_ lhs_path, rhs_path, options
   end
 
-  # Compares two streams, named by +lhs_stm+ and +rhs_stm+, in a textual
-  # manner according to the given +options+
+  # Compares two streams, +lhs_stm+ and +rhs_stm+, in a textual
+  # manner according to the given +options+.
   #
   # === Signature
   #
@@ -111,15 +110,14 @@ module CmpFS_Compare_Methods
   #   - +:trim_lines+:: (boolean) Determines whether lines should be trimmed of leading and trailing space (including EOL sequence)
   #
   # === Return
-  # +true+ if the files/streams have exactly the same content; +false+
-  # otherwise.
+  # +true+ if the files/streams have the same content; +false+ otherwise.
   def compare_text_streams lhs_stm, rhs_stm, **options
 
     ::CmpFS::Compare::Text::Internal_.compare_text_streams_ lhs_stm, rhs_stm, options
   end
 
-  # Compares two files/streams, named by +lhs+ and +rhs+, in a textual
-  # manner according to the given +options+
+  # Compares two files/streams, +lhs+ and +rhs+, in a textual
+  # manner according to the given +options+.
   #
   # === Signature
   #
@@ -134,8 +132,7 @@ module CmpFS_Compare_Methods
   #   - +:trim_lines+:: (boolean) Determines whether lines should be trimmed of leading and trailing space (including EOL sequence)
   #
   # === Return
-  # +true+ if the files/streams have exactly the same content; +false+
-  # otherwise.
+  # +true+ if the files/streams have the same content; +false+ otherwise.
   def compare_text lhs, rhs, **options
 
     ::CmpFS::Compare::Text::Internal_.compare_text_ lhs, rhs, options

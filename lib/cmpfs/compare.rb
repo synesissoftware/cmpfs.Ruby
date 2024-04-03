@@ -5,7 +5,7 @@
 # Purpose:  Version for cmpfs.Ruby library
 #
 # Created:  1st March 2019
-# Updated:  1st April 2024
+# Updated:  2nd April 2024
 #
 # Home:     http://github.com/synesissoftware/cmpfs.Ruby
 #
@@ -45,12 +45,12 @@
 # ######################################################################## #
 
 
-if RUBY_VERSION >= '2'
-
-  require 'cmpfs/compare/api_2'
-else
+if RUBY_VERSION < '2'
 
   require 'cmpfs/compare/api_1_9'
+else
+
+  require 'cmpfs/compare/api_2'
 end
 
 
