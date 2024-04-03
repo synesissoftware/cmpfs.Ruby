@@ -4,7 +4,7 @@
 # Purpose:  Gemspec for cmpfs.Ruby library
 #
 # Created:  1st March 2019
-# Updated:  1st April 2024
+# Updated:  4th April 2024
 #
 # ######################################################################### #
 
@@ -34,7 +34,7 @@ END_DESC
 
   if RUBY_VERSION >= '2'
 
-    spec.required_ruby_version = '~> 2.0'
+    spec.required_ruby_version = '~> 2'
   else
 
     spec.required_ruby_version = [ '~> 1.9', '>= 1.9.3' ]
