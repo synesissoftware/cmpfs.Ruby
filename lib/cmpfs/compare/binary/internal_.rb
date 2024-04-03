@@ -5,9 +5,12 @@ require 'stringio'
 
 module CmpFS
 module Compare
+
+# Binary comparison functions
 module Binary
 
-module Internal_
+# @!visibility private
+module Internal_ # :nodoc: all
 
     def self.determine_param_type_ p
 

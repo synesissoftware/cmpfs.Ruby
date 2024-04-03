@@ -51,7 +51,7 @@
 module CmpFS
 
   # Current version of the cmpfs.Ruby library
-  VERSION           = '0.2.1.3'
+  VERSION           = '0.2.1.4'
 
   private
   VERSION_PARTS_    = VERSION.split(/[.]/).collect { |n| n.to_i } # :nodoc:
