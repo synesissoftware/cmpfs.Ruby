@@ -34,7 +34,7 @@ END_DESC
 
   if RUBY_VERSION >= '2'
 
-    spec.required_ruby_version = '~> 2'
+    spec.required_ruby_version = '>= 2'
   else
 
     spec.required_ruby_version = [ '~> 1.9', '>= 1.9.3' ]
