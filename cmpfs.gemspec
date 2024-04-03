@@ -29,7 +29,7 @@ END_DESC
   spec.authors      = [ 'Matt Wilson' ]
   spec.email        = 'matthew@synesis.com.au'
   spec.homepage     = 'http://github.com/synesissoftware/cmpfs.Ruby'
-  spec.license      = 'BSD 3-Clause'
+  spec.license      = 'BSD-3-Clause'
   spec.files        = Dir[ 'Rakefile', '{bin,examples,lib,man,spec,test}/**/*', 'README*', 'LICENSE*' ] & `git ls-files -z`.split("\0")
 
   if RUBY_VERSION >= '2'
