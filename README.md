@@ -3,6 +3,7 @@
 **Com**pare **F**ile-**S**ystem entities, for **Ruby**
 
 [![Gem Version](https://badge.fury.io/rb/cmpfs-ruby.svg)](https://badge.fury.io/rb/cmpfs-ruby)
+[![Ruby](https://github.com/synesissoftware/cmpfs.Ruby/actions/workflows/ruby.yml/badge.svg)](https://github.com/synesissoftware/cmpfs.Ruby/actions/workflows/ruby.yml)
 
 
 ## Introduction
