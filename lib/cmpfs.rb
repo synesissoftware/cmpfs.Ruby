@@ -1,11 +1,11 @@
-
+# frozen_string_literal: true
 # ######################################################################## #
 # File:     cmpfs.rb
 #
 # Purpose:  Primary require for cmpfs.Ruby library
 #
 # Created:  1st March 2019
-# Updated:  2nd April 2024
+# Updated:  15th August 2026
 #
 # Home:     http://github.com/synesissoftware/cmpfs.Ruby
 #
