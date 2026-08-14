@@ -4,6 +4,7 @@
 ## 0.2.4 - 15th August 2026
 
 * added `# frozen_string_literal: true` to all **lib/** sources;
+* completed **EXAMPLES.md** catalogue for existing examples;
 
 
 ## 0.2.3 - 4th April 2024
