@@ -1,4 +1,4 @@
-# **cmpfs.Ruby** Changes
+# cmpfs.Ruby - Changes <!-- omit in toc -->
 
 T.B.C.
 
