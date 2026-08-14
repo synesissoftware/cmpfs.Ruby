@@ -1,6 +1,11 @@
 # cmpfs.Ruby - Changes <!-- omit in toc -->
 
 
+## 0.2.4 - 15th August 2026
+
+T.B.C.
+
+
 ## 0.2.3 - 4th April 2024
 
 * fixed restrictive Ruby 2.x dependency in gemspec;
