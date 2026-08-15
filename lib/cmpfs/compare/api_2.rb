@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 unless RUBY_VERSION >= '2'
 
   abort "This file required Ruby 2+: RUBY_VERSION='#{RUBY_VERSION}'"
