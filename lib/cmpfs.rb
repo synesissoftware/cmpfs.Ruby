@@ -5,9 +5,9 @@
 # Purpose:  Primary require for cmpfs.Ruby library
 #
 # Created:  1st March 2019
-# Updated:  15th August 2026
+# Updated:  19th August 2026
 #
-# Home:     http://github.com/synesissoftware/cmpfs.Ruby
+# Home:     https://github.com/synesissoftware/cmpfs.Ruby
 #
 # Author:   Matthew Wilson
 #
