@@ -3,7 +3,8 @@
 
 ## Functional improvements
 
-* \<none>
+* [ ] quiet assigned-but-unused variable warnings in **lib/cmpfs/compare/text/internal_.rb** (`lhs_ix`, `rhs_ix`, `lhs_nr`, `rhs_nr`; Ruby 3.4 `-W` / CI **Warnings** job);
+* [ ] quiet the ambiguous `/` regexp warning in **test/unit/tc_version.rb** (Ruby 3.4 `-W` / CI **Warnings** job);
 
 
 ## Performance improvements
