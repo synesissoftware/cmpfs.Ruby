@@ -1,7 +1,7 @@
 # cmpfs.Ruby - Changes <!-- omit in toc -->
 
 
-## 0.2.5 - 19th August 2026
+## 0.2.5 - 27th August 2026
 
 * renamed **cmpfs.gemspec** to **cmpfs-ruby.gemspec** so the filename stem matches `spec.name`;
 * **cmpfs-ruby.gemspec**: `spec.summary` matches the README tagline; packaged **AUTHORS**, **CHANGES**, **CONTRIBUTING**, **EXAMPLES**, **FAQ**, **INSTALL**, **NEWS**, **SECURITY**, and **TODO**; **Gemfile.lock** and **.ruby-version** excluded from `spec.files`;
