@@ -2,13 +2,11 @@
 
 **Com**pare **F**ile-**S**ystem entities, for **Ruby**
 
+![Language](https://img.shields.io/badge/Ruby-CC342D?style=flat&logo=ruby&logoColor=white)
+[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 [![Gem Version](https://badge.fury.io/rb/cmpfs-ruby.svg)](https://badge.fury.io/rb/cmpfs-ruby)
+[![Last Commit](https://img.shields.io/github/last-commit/synesissoftware/cmpfs.Ruby)](https://github.com/synesissoftware/cmpfs.Ruby/commits/master)
 [![Ruby](https://github.com/synesissoftware/cmpfs.Ruby/actions/workflows/ruby.yml/badge.svg)](https://github.com/synesissoftware/cmpfs.Ruby/actions/workflows/ruby.yml)
-
-
-## Introduction
-
-Provides platform-independent facilities for comparing file contents, for both binary and text files
 
 
 ## Table of Contents <!-- omit in toc -->
@@ -21,13 +19,38 @@ Provides platform-independent facilities for comparing file contents, for both b
   - [Where to get help](#where-to-get-help)
   - [Contribution guidelines](#contribution-guidelines)
   - [Dependencies](#dependencies)
+    - [Efferent (fan-out)](#efferent-fan-out)
+      - [Runtime Dependencies (aka "Normal Dependencies")](#runtime-dependencies-aka-normal-dependencies)
+      - [Development Dependencies](#development-dependencies)
+    - [Afferent (fan-in)](#afferent-fan-in)
+      - [Runtime dependents](#runtime-dependents)
+      - [Development dependents](#development-dependents)
   - [Related projects](#related-projects)
   - [License](#license)
 
 
+## Introduction
+
+**cmpfs.Ruby** provides platform-independent facilities for comparing file contents, for both binary and text files.
+
+It has **no dependencies** on any other non-standard library.
+
+
 ## Installation
 
-Install using `gem install cmpfs-ruby` or add it to your `Gemfile`.
+Install via **gem** as in:
+
+```
+gem install cmpfs-ruby
+```
+
+or add it to your `Gemfile`.
+
+Use via **require**, as in:
+
+```Ruby
+require 'cmpfs'
+```
 
 
 ## Components
@@ -45,6 +68,8 @@ all of which are obtained when `extend`ing or `include`ing the `CmpFS` module.
 
 
 ## Examples
+
+Examples are provided in the ```examples``` directory, along with a markdown description for each. A detailed list TOC of them is provided in [EXAMPLES.md](./EXAMPLES.md).
 
 **examples/compare_two_binary_files.rb**:
 ```Ruby
@@ -143,6 +168,7 @@ $stdout.puts "files are #{compare_text(lhs_path, rhs_path, skip_blank_lines: tru
 
 ## Project Information
 
+
 ### Where to get help
 
 [GitHub Page](https://github.com/synesissoftware/cmpfs.Ruby "GitHub Page")
@@ -156,6 +182,38 @@ Defect reports, feature requests, and pull requests are welcome on https://githu
 ### Dependencies
 
 
+#### Efferent (fan-out)
+
+Libraries upon which **cmpfs.Ruby** depends:
+
+
+##### Runtime Dependencies (aka "Normal Dependencies")
+
+* \<none>;
+
+
+##### Development Dependencies
+
+* [**rake**](https://rubygems.org/gems/rake);
+* [**test-unit**](https://rubygems.org/gems/test-unit);
+* [**xqsr3**](https://github.com/synesissoftware/xqsr3);
+
+
+#### Afferent (fan-in)
+
+Projects that depend on **cmpfs.Ruby**:
+
+
+##### Runtime dependents
+
+* \<none>;
+
+
+##### Development dependents
+
+* \<none>;
+
+
 ### Related projects
 
 * C/C++ **cmpfs** — same product idea (binary/text file and stream comparison); recovery into freelibs is planned beside this gem (not yet published as a sibling tree here);
@@ -167,4 +225,3 @@ Defect reports, feature requests, and pull requests are welcome on https://githu
 
 
 <!-- ########################### end of file ########################### -->
-

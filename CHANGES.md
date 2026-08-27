@@ -1,6 +1,18 @@
 # cmpfs.Ruby - Changes <!-- omit in toc -->
 
 
+## 0.2.5 - 19th August 2026
+
+* renamed **cmpfs.gemspec** to **cmpfs-ruby.gemspec** so the filename stem matches `spec.name`;
+* **cmpfs-ruby.gemspec**: `spec.summary` matches the README tagline; packaged **AUTHORS**, **CHANGES**, **CONTRIBUTING**, **EXAMPLES**, **FAQ**, **INSTALL**, **NEWS**, **SECURITY**, and **TODO**; **Gemfile.lock** and **.ruby-version** excluded from `spec.files`;
+* stop tracking **Gemfile.lock**; **Gemfile** sets `lockfile false` when Bundler supports it; CI uses `bundler-cache: false` because Bundler 4 then writes no lockfile and **ruby/setup-ruby** cache cats **Gemfile.lock**;
+* CI **Warnings** job now runs on Ruby **3.4**; `gem build cmpfs-ruby.gemspec`;
+* updated **run_all_unit_tests.sh** (from https://github.com/synesissoftware/misc-dev-scripts) to skip **tput** when **$TERM** is unset or stdout is not a TTY;
+* reordered **README.md** (tagline before badges; TOC after badges), added Language / License / Last Commit badges and **Dependencies** (Efferent / Afferent);
+* **EXAMPLES.md** example links are repo-relative (`./examples/…`);
+* library source **Home:** URLs now use `https`;
+
+
 ## 0.2.4 - 15th August 2026
 
 * added `# frozen_string_literal: true` to all **lib/** sources;

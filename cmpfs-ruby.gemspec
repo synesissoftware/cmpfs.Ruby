@@ -1,12 +1,12 @@
-# ######################################################################### #
-# File:     cmpfs.gemspec
+# ######################################################################## #
+# File:     cmpfs-ruby.gemspec
 #
 # Purpose:  Gemspec for cmpfs.Ruby library
 #
 # Created:  1st March 2019
-# Updated:  15th August 2026
+# Updated:  19th August 2026
 #
-# ######################################################################### #
+# ######################################################################## #
 
 
 $:.unshift File.join(File.dirname(__FILE__), 'lib')
@@ -17,8 +17,8 @@ require 'cmpfs/version'
 Gem::Specification.new do |spec|
 
   spec.name         = 'cmpfs-ruby'
+  spec.summary      = 'Compare File-System entities, for Ruby'
   spec.version      = CmpFS::VERSION
-  spec.summary      = 'CmpFS.Ruby'
   spec.description  = <<END_DESC
 Compare File-System entities, for Ruby is a library that provides comparison
 functions for file-system entities - files and streams - including binary and
@@ -33,7 +33,6 @@ END_DESC
   ]
   spec.homepage     = 'https://github.com/synesissoftware/cmpfs.Ruby'
   spec.license      = 'BSD-3-Clause'
-  spec.files        = Dir[ 'Rakefile', '{bin,examples,lib,man,spec,test}/**/*', 'README*', 'LICENSE*' ] & `git ls-files -z`.split("\0")
 
   spec.required_ruby_version = [ '>= 1.9.3' ]
 
@@ -44,7 +43,27 @@ END_DESC
     'source_code_uri' => 'https://github.com/synesissoftware/cmpfs.Ruby',
   }
 
-  spec.add_development_dependency "xqsr3", [ '>= 0.39.5', '< 1.0' ]
+  spec.files = Dir[
+    'Rakefile',
+    '{bin,examples,lib,man,spec,test}/**/*',
+    'AUTHORS*',
+    'CHANGES*',
+    'CONTRIBUTING*',
+    'EXAMPLES*',
+    'FAQ*',
+    'INSTALL*',
+    'LICENSE*',
+    'NEWS*',
+    'README*',
+    'SECURITY*',
+    'TODO*',
+  ] & `git ls-files -z`.split("\0")
+  spec.files -= [
+    '.ruby-version',
+    'Gemfile.lock',
+  ]
+
+  spec.add_development_dependency 'xqsr3', [ '>= 0.39.5', '< 1.0' ]
 end
 
 
