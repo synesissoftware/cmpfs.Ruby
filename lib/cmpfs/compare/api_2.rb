@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 
 unless RUBY_VERSION >= '2'
 

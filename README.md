@@ -3,6 +3,7 @@
 **Com**pare **F**ile-**S**ystem entities, for **Ruby**
 
 [![Gem Version](https://badge.fury.io/rb/cmpfs-ruby.svg)](https://badge.fury.io/rb/cmpfs-ruby)
+[![Ruby](https://github.com/synesissoftware/cmpfs.Ruby/actions/workflows/ruby.yml/badge.svg)](https://github.com/synesissoftware/cmpfs.Ruby/actions/workflows/ruby.yml)
 
 
 ## Introduction
@@ -157,7 +158,7 @@ Defect reports, feature requests, and pull requests are welcome on https://githu
 
 ### Related projects
 
-T.B.C.
+* C/C++ **cmpfs** — same product idea (binary/text file and stream comparison); recovery into freelibs is planned beside this gem (not yet published as a sibling tree here);
 
 
 ### License

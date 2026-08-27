@@ -1,57 +1,44 @@
-
 # directories (by name)
 
+/.bzr/
 /.bundle/
+/.config/
 /.svn/
 /.yardoc/
 
 /_yardoc/
 
+/InstalledFiles/
 /build/
-/build-iPhoneOS/
-/build-iPhoneSimulator/
 /coverage/
 /doc/
-/rdoc/
 /lib/bundler/man/
+/old-gems/
 /pkg/
+/rdoc/
+/scratch/
 /spec/reports/
 /test/tmp/
 /test/version_tmp/
 /tmp/
 /vendor/bundle/
-/InstalledFiles/
-
 
 # directories (by pattern)
-
 
 # files (by name)
 
 .DS_Store
-.bundle
-.config
 .repl_history
+.ruby-version
 .rvmrc
-.yardoc
-
-_yardoc
-
-Gemfile.lock
-InstalledFiles
-coverage
-pkg
-rdoc
 
 /spec/examples.txt
 
-
 # files (by pattern)
-
-.dat*
 
 *~
 *.*~
+.dat*
 *.b64
 *.bridgesupport
 *.gem
@@ -61,4 +48,3 @@ rdoc
 *.swp
 *.tmp
 *.zip
-
