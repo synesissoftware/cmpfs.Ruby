@@ -2,6 +2,7 @@
 
 | Date             | News Item                                                                                |
 | ---------------- | ---------------------------------------------------------------------------------------- |
+| 28th August 2026 | [**cmpfs.Ruby** 0.2.6](https://github.com/synesissoftware/cmpfs.Ruby/releases/tag/0.2.6) |
 | 27th August 2026 | [**cmpfs.Ruby** 0.2.5](https://github.com/synesissoftware/cmpfs.Ruby/releases/tag/0.2.5) |
 | 15th August 2026 | [**cmpfs.Ruby** 0.2.4](https://github.com/synesissoftware/cmpfs.Ruby/releases/tag/0.2.4) |
 | 4th April 2024   | [**cmpfs.Ruby** 0.2.3](https://github.com/synesissoftware/cmpfs.Ruby/releases/tag/0.2.3) |
