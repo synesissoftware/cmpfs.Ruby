@@ -5,7 +5,7 @@
 # Purpose:  Version for cmpfs.Ruby library
 #
 # Created:  1st March 2019
-# Updated:  28th August 2026
+# Updated:  30th August 2026
 #
 # Home:     https://github.com/synesissoftware/cmpfs.Ruby
 #

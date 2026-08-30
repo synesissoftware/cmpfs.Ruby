@@ -1,7 +1,7 @@
 # cmpfs.Ruby - Changes <!-- omit in toc -->
 
 
-## 0.2.6 - 28th August 2026
+## 0.2.6 - 30th August 2026
 
 * removed unused local variable assignments from text stream comparison;
 * parenthesised the regular expression argument in the version test to eliminate an ambiguous regular expression warning under Ruby 3.4 `-W`;
