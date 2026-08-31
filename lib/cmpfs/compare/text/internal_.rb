@@ -83,13 +83,10 @@ module Internal_ # :nodoc: all
         rhs_en.rewind if rhs_stm.respond_to?(:rewind)
       end
 
-      lhs_ix  = 0
-      rhs_ix  = 0
-
       loop do
 
-        lhs_ln, lhs_nr  = self.next_line_or_nil_ lhs_en, options
-        rhs_ln, rhs_nr  = self.next_line_or_nil_ rhs_en, options
+        lhs_ln, = self.next_line_or_nil_ lhs_en, options
+        rhs_ln, = self.next_line_or_nil_ rhs_en, options
 
         if lhs_ln != rhs_ln
 

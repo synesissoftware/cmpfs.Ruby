@@ -34,7 +34,7 @@ class Test_version < Test::Unit::TestCase
     version = CmpFS::VERSION
     j_n_p   = "#{CmpFS::VERSION_MAJOR}.#{CmpFS::VERSION_MINOR}.#{CmpFS::VERSION_PATCH}"
 
-    assert_match /^#{j_n_p}(|\..+)$/, version
+    assert_match(/^#{j_n_p}(|\..+)$/, version)
   end
 end
 

@@ -5,7 +5,7 @@
 # Purpose:  Version for cmpfs.Ruby library
 #
 # Created:  1st March 2019
-# Updated:  27th August 2026
+# Updated:  30th August 2026
 #
 # Home:     https://github.com/synesissoftware/cmpfs.Ruby
 #
@@ -51,7 +51,7 @@
 module CmpFS
 
   # Current version of the cmpfs.Ruby library
-  VERSION           = '0.2.5'
+  VERSION           = '0.2.6'
 
   private
   VERSION_PARTS_    = VERSION.split(/[.]/).collect { |n| n.to_i } # :nodoc:

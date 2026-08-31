@@ -1,6 +1,14 @@
 # cmpfs.Ruby - Changes <!-- omit in toc -->
 
 
+## 0.2.6 - 30th August 2026
+
+* removed unused local variable assignments from text stream comparison;
+* parenthesised the regular expression argument in the version test to eliminate an ambiguous regular expression warning under Ruby 3.4 `-W`;
+* added the `warnings` branch to CI push triggers and upgraded **actions/checkout** to v7;
+* centralised the project URL in **cmpfs-ruby.gemspec** for the homepage and metadata URLs;
+
+
 ## 0.2.5 - 27th August 2026
 
 * renamed **cmpfs.gemspec** to **cmpfs-ruby.gemspec** so the filename stem matches `spec.name`;
